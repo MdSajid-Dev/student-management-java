@@ -49,46 +49,32 @@ CREATE TABLE students (
   name VARCHAR(100),
   course VARCHAR(100)
 );
-2. Download MySQL Connector/J
+```
+### 2. Download MySQL Connector/J
 Download the latest MySQL JDBC driver from:
 https://dev.mysql.com/downloads/connector/j/
 
 Extract the .jar file (mysql-connector-j-9.3.0.jar).
 
-3. Compile the Java Program
+### 3. Compile the Java Program
 Open your terminal or command prompt in the project folder containing StudentManagement.java and run:
 
 Windows:
+``` javac -cp .;mysql-connector-j-9.3.0.jar StudentManagement.java ```
 
-bash
-Copy
-Edit
-javac -cp .;mysql-connector-j-9.3.0.jar StudentManagement.java
 Linux/Mac:
+``` javac -cp .:mysql-connector-j-9.3.0.jar StudentManagement.java ```
+### 4. Run the Program
 
-bash
-Copy
-Edit
-javac -cp .:mysql-connector-j-9.3.0.jar StudentManagement.java
-4. Run the Program
 Windows:
+``` java -cp .;mysql-connector-j-9.3.0.jar StudentManagement ```
 
-bash
-Copy
-Edit
-java -cp .;mysql-connector-j-9.3.0.jar StudentManagement
 Linux/Mac:
+``` java -cp .:mysql-connector-j-9.3.0.jar StudentManagement ```
 
-bash
-Copy
-Edit
-java -cp .:mysql-connector-j-9.3.0.jar StudentManagement
-Usage
+### CLI Output
 On running, you will see a menu like:
-
-sql
-Copy
-Edit
+```
 --- Student Management System ---
 1. Add Student
 2. View All Students
@@ -96,20 +82,17 @@ Edit
 4. Update Student
 5. Delete Student
 6. Exit
-Choose option: 
-Follow the prompts to manage student records.
+Choose option:
+```
+- Follow the prompts to manage student records.
 
-Notes
-Replace mysql-connector-j-9.3.0.jar with your actual MySQL Connector JAR filename.
+### Notes
+- Replace mysql-connector-j-9.3.0.jar with your actual MySQL Connector JAR filename.
+- Ensure the MySQL server is running before launching the application.
+- The program uses the MySQL user root with no password by default. Update the USER and PASS constants in the Java file if your setup differs.
 
-Ensure the MySQL server is running before launching the application.
-
-The program uses the MySQL user root with no password by default. Update the USER and PASS constants in the Java file if your setup differs.
-
-License
+### License
 This project is open-source and free to use.
 
-Author
+### Author
 Mohamed Sajid M
-GitHub Profile
-LinkedIn Profile
